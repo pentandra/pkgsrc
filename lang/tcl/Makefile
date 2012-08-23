@@ -15,6 +15,8 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
+USE_GCC_RUNTIME=	yes
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_DIRS=		unix
