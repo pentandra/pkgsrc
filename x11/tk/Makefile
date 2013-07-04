@@ -14,13 +14,16 @@ LICENSE=	2-clause-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_MULTIARCH=		lib
+MULTIARCH_DIRS.lib=	# manually set in PLIST
+
 WRKSRC=			${WRKDIR}/tk${TK_VERSION}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
-CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib${LIBARCHSUFFIX}
+CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib${LIBARCHSUFFIX}
 PTHREAD_OPTS+=		require
 
 TEST_TARGET=		test
@@ -34,7 +37,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 SUBST_CLASSES+=		tk-config
 SUBST_STAGE.tk-config=	post-build
 SUBST_FILES.tk-config=	unix/tkConfig.sh
-SUBST_SED.tk-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
+SUBST_SED.tk-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib${LIBARCHSUFFIX}|"
 SUBST_SED.tk-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tk|"
 
 PLIST_SUBST+=		SONUM=${TK_SONUM}
