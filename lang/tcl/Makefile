@@ -17,6 +17,7 @@ WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
 USE_MULTIARCH=		lib
 MULTIARCH_DIRS.lib=	# manually set in PLIST
+USE_GCC_RUNTIME=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

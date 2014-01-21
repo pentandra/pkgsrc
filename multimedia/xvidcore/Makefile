@@ -11,6 +11,7 @@ COMMENT=	ISO MPEG-4 compliant video codec
 LICENSE=	gnu-gpl-v2
 
 USE_MULTIARCH=	lib
+USE_GCC_RUNTIME=yes
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
