@@ -51,6 +51,10 @@ CONF_FILES+=		share/examples/rabbitmq/rabbitmq-env.conf \
 CONF_FILES+=		share/examples/rabbitmq/rabbitmq.config.example \
 			  ${PKG_SYSCONFDIR}/rabbitmq.config
 
+FILES_SUBST+=		RMQ_USER=${RMQ_USER}
+FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
+FILES_SUBST+=		RMQ_DIR=${RMQ_DIR}
+
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 
 SCRIPTS_DIR=		${WRKSRC}/scripts
