@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX:Q}
 
 .if (defined(SET_LIBDIR) && !empty(SET_LIBDIR)) || \
 	(defined(GNU_CONFIGURE_LIBDIR) && !empty(GNU_CONFIGURE_LIBDIR)) || \
-	(defined(GNU_CONFIGURE_LIBSUBDIR) && !empty(GNU_CONFIGURE_LIBSUBDIR) || \
+	(defined(GNU_CONFIGURE_LIBSUBDIR) && !empty(GNU_CONFIGURE_LIBSUBDIR)) || \
 	(defined(_MULTIARCH) && !empty(USE_MULTIARCH:Mlib) && !defined(NO_MULTIARCH_LIBDIR))
 CONFIGURE_HAS_LIBDIR=	yes
 .else
