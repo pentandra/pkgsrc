@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/10/03 07:52:32 prlw1 Exp $
+# $NetBSD: Makefile,v 1.48 2014/01/25 10:30:24 wiz Exp $
 
 DISTNAME=	libxml2-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 USE_MULTIARCH=	lib
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 NO_CONFIGURE=	YES
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.

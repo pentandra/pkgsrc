@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/20 09:38:04 obache Exp $
-#
+# $NetBSD: Makefile,v 1.22 2014/01/25 10:30:24 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -10,8 +9,6 @@ COMMENT=	Python interface to expat
 
 USE_MULTIARCH=		lib
 MULTIARCH_DIRS.lib=	${PYLIB}/lib-dynload
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/pyexpat.c
 

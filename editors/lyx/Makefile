@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/19 14:04:39 rumko Exp $
-#
+# $NetBSD: Makefile,v 1.39 2014/01/25 10:45:18 wiz Exp $
 
 DISTNAME=		lyx-2.0.6
 CATEGORIES=		editors
@@ -65,6 +64,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 
@@ -90,7 +90,7 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			SHARE_DIR=share/lyx
 .endif
 
-PYTHON_PATCH_SCRIPTS=	development/cmake/doc/ReplaceValues.py \
+REPLACE_PYTHON=	development/cmake/doc/ReplaceValues.py \
 			development/cmake/po/cat.py \
 			development/tools/convert_kmap.py \
 			development/tools/gen_lfuns.py \

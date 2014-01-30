@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2014/01/19 20:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.675 2014/01/27 06:09:41 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -346,6 +346,7 @@ SUBDIR+=	p5-SVG
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Template-GD
 SUBDIR+=	p5-cairo
+SUBDIR+=	p5-cairo-gobject
 SUBDIR+=	p5-clutter
 SUBDIR+=	panomatic
 SUBDIR+=	pdiff
@@ -380,6 +381,7 @@ SUBDIR+=	py-actdiag
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
+SUBDIR+=	py-cairo3
 SUBDIR+=	py-dot
 SUBDIR+=	py-fits
 SUBDIR+=	py-gdchart
