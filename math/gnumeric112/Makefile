@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/02 18:50:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/27 20:47:20 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.9
 CATEGORIES=	math gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/gnumeric/
+HOMEPAGE=	https://wiki.gnome.org/Apps/Gnumeric
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2
 
@@ -26,6 +26,7 @@ PLIST_SUBST+=		GOFFICE_VERSION=${GOFFICE_VERSION}
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.12.9
 .include "../../lang/python/application.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 

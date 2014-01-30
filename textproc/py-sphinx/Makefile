@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/01/02 17:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2014/01/27 19:14:26 wiz Exp $
 
-DISTNAME=	Sphinx-1.2
+DISTNAME=	Sphinx-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sphinx/
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
 
 USE_LANGUAGES=	#none
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 
