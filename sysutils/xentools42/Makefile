@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/07 12:59:35 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:45:21 wiz Exp $
 
 VERSION=	4.2.3
 VERSION_IPXE=	1.0.0
@@ -25,6 +24,8 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
 PKG_SYSCONFSUBDIR=	xen
 
@@ -62,25 +63,25 @@ MAKE_ENV+=		V=YES
 #MAKE_ENV+=		INSTALL_PROG=${BSD_INSTALL_PROGRAM}
 
 PY_PATCHPLIST=		yes
-#PYTHON_PATCH_SCRIPTS+=	misc/xm
-#PYTHON_PATCH_SCRIPTS+=	misc/netfix
-#PYTHON_PATCH_SCRIPTS+=	misc/xen-bugtool
-#PYTHON_PATCH_SCRIPTS+=	misc/xencons
-#PYTHON_PATCH_SCRIPTS+=	misc/xend
-#PYTHON_PATCH_SCRIPTS+=	misc/xensymoops
-#PYTHON_PATCH_SCRIPTS+=	misc/xen-python-path
-#PYTHON_PATCH_SCRIPTS+=	pygrub/src/pygrub
-#PYTHON_PATCH_SCRIPTS+=	python/xen/util/*.py
-#PYTHON_PATCH_SCRIPTS+=	python/xen/xend/*.py
-#PYTHON_PATCH_SCRIPTS+=	python/xen/xm/*.py
-#PYTHON_PATCH_SCRIPTS+=	python/xen/util/*.py
-#PYTHON_PATCH_SCRIPTS+=	python/*.py
-#PYTHON_PATCH_SCRIPTS+=	security/python/xensec_gen/cgi-bin/policy.cgi
-#PYTHON_PATCH_SCRIPTS+=	security/python/xensec_gen/*.py
-#PYTHON_PATCH_SCRIPTS+=	security/python/*.py
-#PYTHON_PATCH_SCRIPTS+=	security/*.py
-#PYTHON_PATCH_SCRIPTS+=	xenmon/*.py
-#PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
+#REPLACE_PYTHON+=	misc/xm
+#REPLACE_PYTHON+=	misc/netfix
+#REPLACE_PYTHON+=	misc/xen-bugtool
+#REPLACE_PYTHON+=	misc/xencons
+#REPLACE_PYTHON+=	misc/xend
+#REPLACE_PYTHON+=	misc/xensymoops
+#REPLACE_PYTHON+=	misc/xen-python-path
+#REPLACE_PYTHON+=	pygrub/src/pygrub
+#REPLACE_PYTHON+=	python/xen/util/*.py
+#REPLACE_PYTHON+=	python/xen/xend/*.py
+#REPLACE_PYTHON+=	python/xen/xm/*.py
+#REPLACE_PYTHON+=	python/xen/util/*.py
+#REPLACE_PYTHON+=	python/*.py
+#REPLACE_PYTHON+=	security/python/xensec_gen/cgi-bin/policy.cgi
+#REPLACE_PYTHON+=	security/python/xensec_gen/*.py
+#REPLACE_PYTHON+=	security/python/*.py
+#REPLACE_PYTHON+=	security/*.py
+#REPLACE_PYTHON+=	xenmon/*.py
+#REPLACE_PYTHON+=	xentrace/xentrace_format
 
 REPLACE_PYTHON+=	misc/sbdf2devicepath misc/sxp-pretty misc/xen-bugtool
 REPLACE_PYTHON+=	misc/xen-python-path misc/xen-ringwatch misc/xencons

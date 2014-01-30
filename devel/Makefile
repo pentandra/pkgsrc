@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1840 2014/01/14 19:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.1845 2014/01/26 12:08:38 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -205,7 +205,6 @@ SUBDIR+=	etrace
 SUBDIR+=	exctags
 SUBDIR+=	exempi
 SUBDIR+=	fann
-SUBDIR+=	fann-devel
 SUBDIR+=	fastdep
 SUBDIR+=	ffcall
 SUBDIR+=	fhist
@@ -854,6 +853,7 @@ SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Git-CPAN-Patch
 SUBDIR+=	p5-Git-Repository
 SUBDIR+=	p5-Git-Wrapper
+SUBDIR+=	p5-Glib-Object-Introspection
 SUBDIR+=	p5-Gnome2
 SUBDIR+=	p5-Gnome2-GConf
 SUBDIR+=	p5-Graph
@@ -1437,7 +1437,6 @@ SUBDIR+=	py-distribute
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-expect
-SUBDIR+=	py-fann
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flakes
 SUBDIR+=	py-funcparserlib
@@ -1450,8 +1449,8 @@ SUBDIR+=	py-greenlet
 SUBDIR+=	py-hgtools
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipython
-SUBDIR+=	py-ipython012
 SUBDIR+=	py-ipython013
+SUBDIR+=	py-ipython1
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
