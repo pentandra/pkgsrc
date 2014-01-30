@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2013/10/20 22:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/27 19:44:24 wiz Exp $
 
-DISTNAME=	Cython-0.19.2
+DISTNAME=	Cython-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Cy/cy/}
 CATEGORIES=	lang python
 MASTER_SITES=	http://cython.org/release/
@@ -12,7 +12,6 @@ LICENSE=	apache-1.1
 
 USE_LANGUAGES=	c
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_VARS=	cygdb

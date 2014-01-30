@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/01/11 14:42:06 adam Exp $
+# $NetBSD: Makefile,v 1.59 2014/01/25 10:30:31 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	4
@@ -10,8 +10,6 @@ COMMENT=	Tkinter -- Python interface to Tcl/Tk
 LICENSE=	python-software-foundation
 
 USE_GCC_RUNTIME=yes
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
 			${PYSUBDIR}/Modules/tkappinit.c
