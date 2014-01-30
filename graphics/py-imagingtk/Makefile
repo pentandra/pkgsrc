@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/21 11:24:56 wiz Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imagingtk-1.1.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics python
 MASTER_SITES=	http://effbot.org/downloads/
 
@@ -13,9 +13,9 @@ COMMENT=	Tk support for the Python Imaging Library (PIL)
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 DIST_SUBDIR=	python
-PYDISTUTILSPKG=	yes
-BUILDLINK_API_DEPENDS.python20+=	python20>=2.0.1nb4
-PY_PATCHPLIST=	yes
+EGG_NAME=	${DISTNAME:S/Imaging/PIL/}
+PY_NO_EGG=	yes # same egg installed by py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 
@@ -27,7 +27,7 @@ post-install:
 	thresholder.py viewer.py \
 	${DESTDIR}${PREFIX}/share/examples/${PYPKGPREFIX}-imaging )
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
