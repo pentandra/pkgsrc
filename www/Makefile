@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1014 2014/01/17 13:24:06 obache Exp $
+# $NetBSD: Makefile,v 1.1016 2014/01/27 21:42:33 wiedi Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -151,6 +151,7 @@ SUBDIR+=	gallery2
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geeklog
 SUBDIR+=	gitweb
+SUBDIR+=	goaccess
 SUBDIR+=	gtkasp2php
 SUBDIR+=	gtkhtml314
 SUBDIR+=	gwt
@@ -607,6 +608,7 @@ SUBDIR+=	py-flask-sqlalchemy
 SUBDIR+=	py-flask-uploads
 SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
+SUBDIR+=	py-flup3
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-http-parser
