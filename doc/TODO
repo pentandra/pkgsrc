@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12959 2014/01/30 14:41:28 ryoon Exp $
+$NetBSD: TODO,v 1.12962 2014/02/02 07:10:50 richard Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o conserver-8.1.19
 	o consolekit-0.4.5
 	o cook-2.31
-	o coreutils-8.22
 	o courier-0.71
 	o courier-authlib-0.65.0
 	o courier-imap-4.13
@@ -705,7 +704,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdbg-2.5.4
 	o kde4-4.12.2
 	o kdenlive-0.9.6
-	o kdevelop-4.6.0
 	o kdrill-6.5
 	o kid3-3.0.2
 	o kismet-2011.03r2 [pkg/45692]
@@ -970,7 +968,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pyutil-1.9.7
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.2
-	o py-relatorio-0.6.0
 	o py-rope-0.9.4
 	o py-scgi-1.14
 	o py-simpletal-5.1
