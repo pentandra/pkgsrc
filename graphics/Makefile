@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2014/01/27 06:09:41 obache Exp $
+# $NetBSD: Makefile,v 1.677 2014/02/02 07:49:57 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -185,6 +185,7 @@ SUBDIR+=	gpicview
 SUBDIR+=	gqview
 SUBDIR+=	gqview-devel
 SUBDIR+=	grap
+SUBDIR+=	graphite2
 SUBDIR+=	graphviz
 SUBDIR+=	graphviz-dot-mode
 SUBDIR+=	gri
@@ -397,6 +398,7 @@ SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
+SUBDIR+=	py-qrcode
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor

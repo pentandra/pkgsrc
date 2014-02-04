@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2014/01/30 04:54:57 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/01 17:19:07 rodent Exp $
 
-DISTNAME=	0.2
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME:S/_/-/1}
+DISTNAME=	python-sql-0.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	http://python-sql.googlecode.com/archive/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://pypi.python.org/packages/source/p/python-sql/
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://python-sql.googlecode.com/archive/
+HOMEPAGE=	http://code.google.com/p/python-sql/
 COMMENT=	Python library to write SQL queries
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/python-sql-e8322fa5b114
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	sql/aggregate.py
-EGG_NAME=		python_sql-${DISTNAME}
+EGG_NAME=		${DISTNAME:S/-/_/1}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
