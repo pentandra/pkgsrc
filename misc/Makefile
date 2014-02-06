@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.415 2014/01/17 13:02:45 obache Exp $
+# $NetBSD: Makefile,v 1.420 2014/02/01 22:54:50 rodent Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -230,6 +230,11 @@ SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
 SUBDIR+=	py-anki2
 SUBDIR+=	py-carddav
+SUBDIR+=	py-trytond-company
+SUBDIR+=	py-trytond-party
+SUBDIR+=	py-trytond-product
+SUBDIR+=	py-trytond-stock
+SUBDIR+=	py-trytond-stock-lot
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland

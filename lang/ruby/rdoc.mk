@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.16 2014/01/19 12:57:42 taca Exp $
+# $NetBSD: rdoc.mk,v 1.18 2014/02/02 07:48:35 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
