@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1002 2014/01/21 13:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.1005 2014/02/05 09:32:21 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -13,6 +13,7 @@ SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
 SUBDIR+=	Radicale
+SUBDIR+=	SDL2_net
 SUBDIR+=	SDL_net
 SUBDIR+=	adns
 SUBDIR+=	aget
@@ -320,6 +321,7 @@ SUBDIR+=	mydns-pgsql
 SUBDIR+=	nagios-base
 SUBDIR+=	nagios-nrpe
 SUBDIR+=	nagios-nsca
+SUBDIR+=	nagios-plugin-dotpid
 SUBDIR+=	nagios-plugin-dumpdates
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-milter
@@ -537,6 +539,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
 SUBDIR+=	py-boto
+SUBDIR+=	py-caldav
 SUBDIR+=	py-dns
 SUBDIR+=	py-dns3
 SUBDIR+=	py-dpkt

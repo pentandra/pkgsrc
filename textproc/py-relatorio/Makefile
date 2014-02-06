@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/02 08:15:50 wiz Exp $
 
-DISTNAME=	relatorio-0.5.7
+DISTNAME=	relatorio-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/r/relatorio/
