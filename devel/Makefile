@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1848 2014/01/31 12:31:42 rodent Exp $
+# $NetBSD: Makefile,v 1.1853 2014/02/09 15:28:14 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -52,7 +52,6 @@ SUBDIR+=	at-spi
 SUBDIR+=	at-spi2-atk
 SUBDIR+=	at-spi2-core
 SUBDIR+=	atf
-SUBDIR+=	atf-libs
 SUBDIR+=	atk
 SUBDIR+=	atkmm
 SUBDIR+=	autoconf
@@ -215,6 +214,7 @@ SUBDIR+=	florist
 SUBDIR+=	fortran-utils
 SUBDIR+=	fossil
 SUBDIR+=	frama-c
+SUBDIR+=	frink
 SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
@@ -1313,6 +1313,7 @@ SUBDIR+=	p5-Tree-Simple
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-Try-Tiny
 SUBDIR+=	p5-TryCatch
+SUBDIR+=	p5-Types-Serialiser
 SUBDIR+=	p5-UNIVERSAL-can
 SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-UNIVERSAL-moniker
@@ -1446,6 +1447,7 @@ SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
 SUBDIR+=	py-greenlet
+SUBDIR+=	py-h5py
 SUBDIR+=	py-hgtools
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipython
@@ -1459,9 +1461,11 @@ SUBDIR+=	py-libmc
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
+SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-memcached
 SUBDIR+=	py-mock
+SUBDIR+=	py-modulegraph
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
@@ -1474,6 +1478,7 @@ SUBDIR+=	py-pip
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-py
+SUBDIR+=	py-py2app
 SUBDIR+=	py-pyev
 SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
