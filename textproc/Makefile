@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2014/01/18 15:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.755 2014/02/07 03:52:06 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -469,6 +469,7 @@ SUBDIR+=	p5-Text-Markdown-Discount
 SUBDIR+=	p5-Text-MicroTemplate
 SUBDIR+=	p5-Text-Microformat
 SUBDIR+=	p5-Text-Ngram
+SUBDIR+=	p5-Text-Nimble
 SUBDIR+=	p5-Text-PDF
 SUBDIR+=	p5-Text-Patch
 SUBDIR+=	p5-Text-Quoted
@@ -595,6 +596,7 @@ SUBDIR+=	py-Tempita
 SUBDIR+=	py-Unidecode
 SUBDIR+=	py-Whoosh
 SUBDIR+=	py-X
+SUBDIR+=	py-X2
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
@@ -612,7 +614,6 @@ SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-iniparse
-SUBDIR+=	py-jinja
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jsonlib
 SUBDIR+=	py-jsonlib3

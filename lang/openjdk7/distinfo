@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2014/01/20 19:25:11 joerg Exp $
+$NetBSD: distinfo,v 1.42 2014/01/31 04:39:18 obache Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -57,9 +57,9 @@ Size (openjdk7/jdk7-jaf-2010_08_19.zip) = 70613 bytes
 SHA1 (openjdk7/jdk7-jaxws2_2_4-b03-2011_05_27.zip) = 539bcf80b9a86c97406a3c79e7d10684b213a4be
 RMD160 (openjdk7/jdk7-jaxws2_2_4-b03-2011_05_27.zip) = 49273489651c1950376966955f28e4069165e818
 Size (openjdk7/jdk7-jaxws2_2_4-b03-2011_05_27.zip) = 6046353 bytes
-SHA1 (openjdk7/openjdk-1.7.45-20140101.tar.bz2) = 8c1bb4ce614210eaaa3ec46309cd2533c64e1ce4
-RMD160 (openjdk7/openjdk-1.7.45-20140101.tar.bz2) = e4ecfabe920ba796d8f07a9a42899fe6b8bd09ed
-Size (openjdk7/openjdk-1.7.45-20140101.tar.bz2) = 51817743 bytes
+SHA1 (openjdk7/openjdk-1.7.51-20140125.tar.bz2) = 83b3653bda27397431ed12c034a19d523d221f57
+RMD160 (openjdk7/openjdk-1.7.51-20140125.tar.bz2) = c22952181c72ff8d6afeab2199731bc60baeaf80
+Size (openjdk7/openjdk-1.7.51-20140125.tar.bz2) = 51852944 bytes
 SHA1 (openjdk7/rhino1_7R3.zip) = 81f39d6e24529d62b23a6a92a1a09af95495d7c1
 RMD160 (openjdk7/rhino1_7R3.zip) = 3fdc3e1540d0fa35ba7dec1bf34a70b0d41cedd0
 Size (openjdk7/rhino1_7R3.zip) = 4651597 bytes
@@ -81,7 +81,7 @@ SHA1 (patch-aq) = 97303ebcdcf0251406eef816ae56c82c703dab9d
 SHA1 (patch-ar) = 6544d4c7d4f30a3baeac95834e41ce8f7d41f9ec
 SHA1 (patch-as) = 0cef122fb4e8606a9f4923d44079156b89dca0c2
 SHA1 (patch-at) = fdba3bdfccab8de333de08bcc0c9c52d3469d9a3
-SHA1 (patch-aw) = b6de59de25cec67f2f8b776529df7bf23a5d870e
+SHA1 (patch-aw) = 410ac49b2c13009ba95f5fcd08f7312a0f37ad05
 SHA1 (patch-ba) = 97e42aea28e4d7b63f41596690cd9f21c85622bf
 SHA1 (patch-bd) = b192cab222f76b5c05935946c6229117dd905423
 SHA1 (patch-bg) = 90328bd927c52e62d97c72fade2ceb70d42fe273
@@ -156,6 +156,7 @@ SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = 8502fc7da30
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = ca10ce2d79f11925b7ec52fc1b5dfad9b25ddddb
 SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 13aae05b649af0d1f908b0a9b6f60c55d8baa7d4
 SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = 7b1d1c7f84e752ef7c53d5419dc3ab5213fec716
+SHA1 (patch-jdk_src_solaris_classes_sun_net_PortConfig.java) = d25056be8339b0afde8b1e83c5ff32a0466c16d7
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvider.java) = 86ce16bd53c85bc3830ef3f21d52f9a8107b5350
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_fs_BsdFileSystemProvider.java) = b57411309b8d46de6a9ab3606d72690908989d50
 SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = d509a6ed567493024e3ce5de8986912da99f4a9d

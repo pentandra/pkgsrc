@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2014/01/01 11:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2014/02/01 01:51:00 markd Exp $
 
 DISTNAME=	evolution-data-server-2.32.3
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 PYTHON_FOR_BUILD_ONLY=	YES
-PYTHON_PATCH_SCRIPTS=	addressbook/libebook/gen-western-table.py
+REPLACE_PYTHON=	addressbook/libebook/gen-western-table.py
 
 .include "options.mk"
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.138 2014/01/17 19:13:37 tron Exp $
+# $NetBSD: Makefile,v 1.142 2014/02/10 12:01:19 tron Exp $
 
-DISTNAME=	gnutls-3.2.8.1
+DISTNAME=	gnutls-3.2.9
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.2/
 EXTRACT_SUFX=	.tar.xz
@@ -21,11 +22,9 @@ CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=	--disable-openssl-compatibility
 CONFIGURE_ARGS+=	--disable-guile
+CONFIGURE_ARGS+=	--disable-libdane
 CONFIGURE_ARGS+=	--without-tpm
 CONFIGURE_ARGS+=	AUTOGEN=/bin/true
-
-# 3.2.8.1 didn't get a new directory name
-WRKSRC=	${WRKDIR}/gnutls-3.2.8
 
 TEST_TARGET=		check
 INFO_FILES=		yes
@@ -43,8 +42,8 @@ EGDIR=		${PREFIX}/share/examples/gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
-# Assembler support is broken for Mac OS X in 3.2.8.1.
-.if ${OPSYS} == "Darwin"
+# Assembler support is broken for SunOS in 3.2.9.
+.if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-hardware-acceleration
 .endif
 

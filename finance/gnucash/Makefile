@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.192 2014/01/02 01:25:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.195 2014/02/06 18:18:11 wiz Exp $
 
-DISTNAME=		gnucash-2.6.0
+DISTNAME=		gnucash-2.6.1
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +15,7 @@ DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
 DEPENDS+=		guile-www>=2.21:../../devel/guile-www
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -31,6 +33,8 @@ REPLACE_PERL+=		packaging/win32/exetype.pl
 REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		src/quotes/Quote_example.pl
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2.6.1
+REPLACE_PYTHON+=	src/python/pycons/*.py src/python/pycons/pycons
 PY_PATCHPLIST=		yes
 
 PKG_SYSCONFSUBDIR=	gnucash
@@ -44,6 +48,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

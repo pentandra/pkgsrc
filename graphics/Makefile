@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2014/01/19 20:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.678 2014/02/09 15:02:34 rodent Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -185,6 +185,7 @@ SUBDIR+=	gpicview
 SUBDIR+=	gqview
 SUBDIR+=	gqview-devel
 SUBDIR+=	grap
+SUBDIR+=	graphite2
 SUBDIR+=	graphviz
 SUBDIR+=	graphviz-dot-mode
 SUBDIR+=	gri
@@ -346,6 +347,7 @@ SUBDIR+=	p5-SVG
 SUBDIR+=	p5-SWF-File
 SUBDIR+=	p5-Template-GD
 SUBDIR+=	p5-cairo
+SUBDIR+=	p5-cairo-gobject
 SUBDIR+=	p5-clutter
 SUBDIR+=	panomatic
 SUBDIR+=	pdiff
@@ -377,9 +379,11 @@ SUBDIR+=	py-OpenGL
 SUBDIR+=	py-Pillow
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-actdiag
+SUBDIR+=	py-altgraph
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
+SUBDIR+=	py-cairo3
 SUBDIR+=	py-dot
 SUBDIR+=	py-fits
 SUBDIR+=	py-gdchart
@@ -395,6 +399,7 @@ SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
+SUBDIR+=	py-qrcode
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor

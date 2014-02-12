@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.496 2013/11/23 13:59:10 drochner Exp $
+# $NetBSD: Makefile,v 1.499 2014/02/04 11:41:04 obache Exp $
 #
 
 COMMENT=	Audio tools
 
+SUBDIR+=	SDL2_mixer
 SUBDIR+=	SDL_mixer
 SUBDIR+=	SDL_sound
 SUBDIR+=	abcde
@@ -32,6 +33,7 @@ SUBDIR+=	ampache
 SUBDIR+=	applerecords
 SUBDIR+=	ario
 SUBDIR+=	arts
+SUBDIR+=	asunder
 SUBDIR+=	aubio
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
@@ -126,6 +128,7 @@ SUBDIR+=	gbemol
 SUBDIR+=	gimmix
 SUBDIR+=	gkrellm-volume
 SUBDIR+=	glurp
+SUBDIR+=	glyr
 SUBDIR+=	gmp3info
 SUBDIR+=	gmpc
 SUBDIR+=	gmpc-alarm

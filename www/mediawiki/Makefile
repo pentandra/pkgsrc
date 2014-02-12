@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/11/16 12:00:27 wen Exp $
+# $NetBSD: Makefile,v 1.37 2014/02/05 15:21:28 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.21
-PVER=			3
+PVER=			5
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www

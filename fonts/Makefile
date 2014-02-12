@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.241 2013/12/04 17:55:14 minskim Exp $
+# $NetBSD: Makefile,v 1.243 2014/02/02 16:08:07 rodent Exp $
 #
 
 COMMENT=	Fonts
 
 SUBDIR+=	AnonymousPro
 SUBDIR+=	EB-Garamond
+SUBDIR+=	SDL2_ttf
 SUBDIR+=	Symbola-ttf
 SUBDIR+=	TextFonts-ttf
 SUBDIR+=	Xft2
@@ -156,6 +157,7 @@ SUBDIR+=	nanum-ttf
 SUBDIR+=	otf2bdf
 SUBDIR+=	oto
 SUBDIR+=	p5-Font-AFM
+SUBDIR+=	p5-Font-FreeType
 SUBDIR+=	p5-Font-TTF
 SUBDIR+=	p5-Font-TTFMetrics
 SUBDIR+=	pcf2bdf

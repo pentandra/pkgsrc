@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.364 2014/01/12 09:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.367 2014/02/02 00:11:51 rodent Exp $
 #
 
 COMMENT=	Programming languages
@@ -119,6 +119,7 @@ SUBDIR+=	newlisp
 SUBDIR+=	nhc98
 SUBDIR+=	nodejs
 SUBDIR+=	nqp
+SUBDIR+=	nuitka
 SUBDIR+=	objc
 SUBDIR+=	ocaml
 SUBDIR+=	onyx
@@ -148,8 +149,8 @@ SUBDIR+=	pict
 SUBDIR+=	polyml
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-cxfreeze
-SUBDIR+=	py-psyco
 SUBDIR+=	py-pyrex
+SUBDIR+=	py-six
 SUBDIR+=	py26-html-docs
 SUBDIR+=	py27-html-docs
 #SUBDIR+=	python		# only contains Makefile fragments

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.215 2014/01/13 09:59:16 adam Exp $
+# $NetBSD: Makefile,v 1.217 2014/01/31 17:38:48 schnoebe Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	Practical Extraction and Report Language
 
 CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
@@ -281,6 +282,8 @@ post-extract:
 		cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
 		cp ${FILESDIR}/cpan-DB_File-hints-netbsd.pl \
 			${WRKSRC}/cpan/DB_File/hints/netbsd.pl
+		cp ${FILESDIR}/cpan-DB_File-hints-openbsd.pl \
+			${WRKSRC}/cpan/DB_File/hints/openbsd.pl
 
 pre-configure:
 	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f -exec ${RM} -f {} \;

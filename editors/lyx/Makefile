@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2014/01/19 14:04:39 rumko Exp $
-#
+# $NetBSD: Makefile,v 1.40 2014/02/08 18:49:05 rumko Exp $
 
-DISTNAME=		lyx-2.0.6
+DISTNAME=		lyx-2.0.7
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/ \
 			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.0.x/ \
@@ -65,6 +64,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 
@@ -90,7 +90,7 @@ PLIST_SUBST+=		BIN_DIR=bin \
 			SHARE_DIR=share/lyx
 .endif
 
-PYTHON_PATCH_SCRIPTS=	development/cmake/doc/ReplaceValues.py \
+REPLACE_PYTHON=	development/cmake/doc/ReplaceValues.py \
 			development/cmake/po/cat.py \
 			development/tools/convert_kmap.py \
 			development/tools/gen_lfuns.py \
@@ -144,6 +144,7 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../textproc/mythes/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
