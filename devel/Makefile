@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1853 2014/02/09 15:28:14 rodent Exp $
+# $NetBSD: Makefile,v 1.1855 2014/02/12 00:57:25 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -1206,6 +1206,7 @@ SUBDIR+=	p5-Template-Plugin-VMethods
 SUBDIR+=	p5-Term-ANSIColor
 SUBDIR+=	p5-Term-Animation
 SUBDIR+=	p5-Term-Cap
+SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-Prompt
 SUBDIR+=	p5-Term-ReadKey
@@ -1446,6 +1447,7 @@ SUBDIR+=	py-generate
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
+SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hgtools
