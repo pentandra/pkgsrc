@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/11/21 14:06:43 adam Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/11 17:56:16 adam Exp $
 
 .include "dist.mk"
 
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-pymalloc
-CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir:Q}
+CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
