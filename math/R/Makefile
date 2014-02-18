@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2014/02/06 10:57:21 markd Exp $
+# $NetBSD: Makefile,v 1.145 2014/02/17 17:11:07 jperkin Exp $
 
 DISTNAME=		R-3.0.2
 CATEGORIES=		math
@@ -81,6 +81,10 @@ CONFIGURE_ENV+=		R_LD_LIBRARY_PATH=${PREFIX}/lib:${LIBGCC_PREFIX}/${GCC_TARGET_M
 SHAREMODE=		644
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-openmp
+.endif
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
 .if defined(PAPERSIZE)
