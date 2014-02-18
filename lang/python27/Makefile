@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2014/02/09 09:02:50 tron Exp $
+# $NetBSD: Makefile,v 1.36 2014/02/12 23:28:17 tron Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -97,16 +97,6 @@ IS_64BIT_PLATFORM?=	no
 PLIST_VARS+=	dl
 .if empty(IS_64BIT_PLATFORM:M[yY][eE][sS])
 PLIST.dl=	yes
-.endif
-
-# builds additional modules if OpenSSL < 0.9.8
-PLIST_VARS+=		openssl097
-CHECK_BUILTIN.openssl:=	yes
-.include "../../security/openssl/builtin.mk"
-CHECK_BUILTIN.openssl:=	no
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS]) && \
-    !empty(BUILTIN_PKG.openssl:Mopenssl-0.9.[67]*)
-PLIST.openssl097=	yes
 .endif
 
 # setup.py causes some modules to be built if the platform is *not* 64bit.

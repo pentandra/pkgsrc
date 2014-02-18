@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2013/11/06 07:25:49 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2014/02/12 23:28:16 tron Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1709,8 +1709,6 @@ lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_lsprof.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_multibytecodec.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_multiprocessing.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_random.so
-${PLIST.openssl097}lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_sha256.so
-${PLIST.openssl097}lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_sha512.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_socket.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_ssl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload${LIBARCHSUFFIX}/_struct.so

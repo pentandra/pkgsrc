@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1855 2014/02/12 00:57:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1859 2014/02/17 00:30:27 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -829,6 +829,7 @@ SUBDIR+=	p5-File-Save-Home
 SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-File-Slurp
+SUBDIR+=	p5-File-Slurp-Tiny
 SUBDIR+=	p5-File-Slurp-Unicode
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-File-Tempdir
@@ -1452,6 +1453,7 @@ SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hgtools
 SUBDIR+=	py-idle
+SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
@@ -1461,6 +1463,7 @@ SUBDIR+=	py-kqueue
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
 SUBDIR+=	py-lockfile
+SUBDIR+=	py-logan
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-macholib
@@ -1494,6 +1497,7 @@ SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-speaklater
+SUBDIR+=	py-spwd
 SUBDIR+=	py-stompclient
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
