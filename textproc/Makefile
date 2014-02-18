@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2014/02/07 03:52:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.758 2014/02/17 00:21:35 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -597,6 +597,7 @@ SUBDIR+=	py-Unidecode
 SUBDIR+=	py-Whoosh
 SUBDIR+=	py-X
 SUBDIR+=	py-X2
+SUBDIR+=	py-acora
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
@@ -605,6 +606,7 @@ SUBDIR+=	py-creole
 SUBDIR+=	py-cssselect
 SUBDIR+=	py-cssutils
 SUBDIR+=	py-docutils
+SUBDIR+=	py-ejson
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
@@ -745,6 +747,7 @@ SUBDIR+=	tex2page
 SUBDIR+=	texi2html
 SUBDIR+=	texi2roff
 SUBDIR+=	the_silver_searcher
+SUBDIR+=	tinyxml
 SUBDIR+=	tokyodystopia
 SUBDIR+=	trang
 SUBDIR+=	troffcvt
