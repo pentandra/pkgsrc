@@ -5,5 +5,5 @@
 	path = wip
 	url = git://github.com/joyent/pkgsrc-wip.git
 [submodule "pentandra"]
-  path = pentandra
-  url = ssh://git@matthay.process.tree:7999/proc/pkgsrc-pentandra.git
+	path = pentandra
+	url = ssh://git@matthay.process.tree:7999/proc/pkgsrc-pentandra.git
