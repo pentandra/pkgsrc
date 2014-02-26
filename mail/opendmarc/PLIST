@@ -67,4 +67,3 @@ share/doc/opendmarc/opendmarc_xml_parse.html
 share/doc/opendmarc/rddmarc
 share/doc/opendmarc/schema.mysql
 share/examples/opendmarc/opendmarc.conf.sample
-share/examples/rc.d/opendmarc
