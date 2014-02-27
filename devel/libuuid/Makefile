@@ -12,6 +12,7 @@ HOMEPAGE=	http://kernel.org/~kzak/util-linux-ng/
 COMMENT=	Generate unique identifiers for objects
 LICENSE=	modified-bsd
 
+USE_GCC_RUNTIME=	yes
 USE_LIBTOOL=		yes
 USE_MULTIARCH=		lib
 GNU_CONFIGURE=		yes

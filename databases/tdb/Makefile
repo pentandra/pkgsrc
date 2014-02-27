@@ -25,5 +25,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+= buildtools/bin/waf
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 1.2.12
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -10,6 +10,7 @@ COMMENT=	Line editing support for Python
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/readline.c
 
 MULTIARCH_DIRS.lib=	${PYLIB}/lib-dynload
+USE_GCC_RUNTIME=	yes
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
