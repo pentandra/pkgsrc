@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2014/01/05 10:57:11 richard Exp $
+# $NetBSD: options.mk,v 1.11 2014/02/25 09:32:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -21,16 +21,17 @@ MAKE_ENV+=		PDFTEX=${LOCALBASE}/bin/pdftex
 PLIST_VARS+=		nogmp gmp
 .if !empty(PKG_OPTIONS:Mgmp)
 PLIST.gmp=		yes
-CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 .include "../../devel/gmp/buildlink3.mk"
 .else
 PLIST.nogmp=		yes
+CONFIGURE_ARGS+=	--without-gmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 USE_TOOLS+=		imake
 CONFIGURE_ARGS+=	--graphic=X11
-CONFIGURE_ARGS+=	--with-fltk=${PREFIX}
+CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_PREFIX.fltk}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 .include "../../x11/libX11/buildlink3.mk"
