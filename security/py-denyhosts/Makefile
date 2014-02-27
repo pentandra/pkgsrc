@@ -32,6 +32,7 @@ PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 RCD_SCRIPTS+=	denyhosts
+SMF_NAME=	denyhost
 
 post-configure:
 	${RM} ${WRKDIR}/${DISTNAME}/scripts/*.orig
