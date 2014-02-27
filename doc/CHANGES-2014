@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.881 2014/02/26 04:02:16 agc Exp $
+$NetBSD: CHANGES-2014,v 1.888 2014/02/27 12:49:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -1374,3 +1374,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/pcsc-lite to 1.8.11 [gdt 2014-02-25]
 	Updated security/pcsc-tools to 1.4.22 [gdt 2014-02-25]
 	Updated security/libpbc to 0.5.14 [agc 2014-02-25]
+	Updated multimedia/vlc2 to 2.0.9nb3 [wiz 2014-02-26]
+	Updated audio/xmp to 4.0.7 [rxg 2014-02-27]
+	Updated devel/libdatrie to 0.2.8 [obache 2014-02-27]
+	Updated textproc/swath to 0.4.3 [obache 2014-02-27]
+	Updated devel/libthai to 0.1.20 [obache 2014-02-27]
+	Updated inputmethod/gtk-im-libthai to 0.2.1nb13 [obache 2014-02-27]
+	Updated inputmethod/ibus-libthai to 0.1.2 [obache 2014-02-27]
