@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/26 18:15:25 wiedi Exp $
 
 DISTNAME=	rspamd-0.6.8
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Fast, free and open-source spam filtering system
 LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl pkg-config
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
 
@@ -43,7 +43,8 @@ CONF_FILES+=	${EGDIR}/surbl-whitelist.inc ${PKG_SYSCONFDIR}/surbl-whitelist.inc
 CONF_FILES+=	${EGDIR}/workers.conf ${PKG_SYSCONFDIR}/workers.conf
 
 post-extract:
-	cd ${WRKSRC} && chmod 644 conf/*
+	${FIND} ${WRKSRC}/conf -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
+	${FIND} ${WRKSRC}/conf -type f -exec ${CHMOD} ${DOCMODE} {} \;
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
