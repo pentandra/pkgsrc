@@ -314,6 +314,9 @@ OVERRIDE_DIRDEPTH?=	2
 # Support alternative init systems.
 #
 INIT_SYSTEM?=		rc.d
+.if ${INIT_SYSTEM} == "smf"
+.  include "smf.mk"
+.endif
 _BUILD_DEFS+=		INIT_SYSTEM
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
