@@ -38,6 +38,11 @@ MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF_TYPE_DEFAULT?=	motif
 .endif
 
+# Use SMF by default if available.
+.if ${OS_VERSION} >= 5.10
+INIT_SYSTEM?=		smf
+.endif
+
 # Comes with a builtin implementation based on mit-krb5
 KRB5_DEFAULT?=		mit-krb5
 

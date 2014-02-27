@@ -5,7 +5,6 @@ sbin/sslh-select
 share/doc/sslh/ChangeLog
 share/doc/sslh/README
 share/doc/sslh/README.MacOSX
-share/examples/rc.d/sslh
 share/examples/sslh/basic.cfg
 share/examples/sslh/example.cfg
 share/examples/sslh/scripts/etc.default.sslh

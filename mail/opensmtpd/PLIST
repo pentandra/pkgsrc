@@ -16,4 +16,3 @@ sbin/smtpctl
 sbin/smtpd
 share/examples/opensmtpd/mailer.conf
 share/examples/opensmtpd/smtpd.conf
-share/examples/rc.d/opensmtpd
