@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:06 tron Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/02/24 16:15:34 wiz Exp $
 
 DISTNAME=	Mailer-0.1.6
 PKGNAME=	deforaos-mailer-0.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.defora.org/os/download/download/4029/
 
@@ -41,6 +40,7 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

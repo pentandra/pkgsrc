@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2013/08/27 15:50:23 joerg Exp $
+# $NetBSD: Makefile,v 1.105 2014/02/26 10:40:46 jperkin Exp $
 
 ###########################################################################
 ###########################################################################
@@ -67,8 +67,8 @@ USE_TOOLS+=		echo
 .PHONY: fix-libtool
 fix-libtool:
 	cd ${WRKSRC}; for f in libtool; do				\
-		${SED}	-e "s,-L${BUILDLINK_DIR}/lib${LIBARCHSUFFIX} *,,"	\
-			-e "s,${BUILDLINK_DIR}/lib${LIBARCHSUFFIX} *,,"		\
+		${SED}	-e "s,-L${BUILDLINK_DIR}/lib${LIBARCHSUFFIX} *,," \
+			-e "s,${BUILDLINK_DIR}/lib${LIBARCHSUFFIX} *,,"	\
 			$$f > $$f.new;					\
 		if [ -x $$f ]; then ${CHMOD} +x $$f.new; fi;		\
 		${MV} -f $$f.new $$f;					\
