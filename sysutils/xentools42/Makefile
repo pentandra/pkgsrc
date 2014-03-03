@@ -24,7 +24,7 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
-DEPENDS+=		${PYPKGPREFIX}-lxml:../../textproc/py-lxml
+DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
 
