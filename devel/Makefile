@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1869 2014/02/24 12:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.1871 2014/03/01 13:53:15 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -947,6 +947,7 @@ SUBDIR+=	p5-Log-Handler
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
 SUBDIR+=	p5-Log-Report
+SUBDIR+=	p5-Log-Report-Optional
 SUBDIR+=	p5-Log-Trace
 SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-Mac-Carbon
@@ -1189,6 +1190,7 @@ SUBDIR+=	p5-Stream-Buffered
 SUBDIR+=	p5-String-Escape
 SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-String-PerlIdentifier
+SUBDIR+=	p5-String-Print
 SUBDIR+=	p5-Sub-Exporter
 SUBDIR+=	p5-Sub-Exporter-ForMethods
 SUBDIR+=	p5-Sub-Exporter-GlobExporter

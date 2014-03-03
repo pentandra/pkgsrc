@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/08/04 09:22:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/01 06:58:41 obache Exp $
 
 DISTNAME=	jbigkit-2.0
 CATEGORIES=	graphics
@@ -16,9 +16,6 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/jbigkit
 
 TEST_TARGET=	test
-
-CFLAGS+=	-I../libjbig
-MAKEFLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS=	bin include lib${LIBARCHSUFFIX} ${PKGMANDIR}/man1 share/doc/jbig
 

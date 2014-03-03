@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/03/14 16:32:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/02/28 12:36:36 jperkin Exp $
 
 BUILDLINK_TREE+=	postgresql-postgis
 
