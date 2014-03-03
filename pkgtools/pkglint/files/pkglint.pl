@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.862 2014/01/13 01:54:52 cheusov Exp $
+# $NetBSD: pkglint.pl,v 1.866 2014/03/03 05:18:23 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4029,7 +4029,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if ($value =~ m"^(\w+)-(\w+)$") {
 				my ($opsys, $arch) = ($1, $2);
 
-				if ($opsys !~ m"^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
+				if ($opsys !~ m"^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos|solaris)$") {
 					$line->log_warning("Unknown operating system: ${opsys}");
 				}
 				# no check for $os_version
@@ -4291,7 +4291,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if ($value =~ m"^(${part})-(${part})-(${part})$") {
 				my ($opsys, $os_version, $arch) = ($1, $2, $3);
 
-				if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
+				if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|QNX|SunOS)$") {
 					$line->log_warning("Unknown operating system: ${opsys}");
 				}
 				# no check for $os_version
@@ -4936,7 +4936,7 @@ sub checklines_package_Makefile_varorder($) {
 		],
 		[ "Unsorted stuff, part 1", once,
 			[
-				[ "DISTNAME", once ],
+				[ "DISTNAME", optional ],
 				[ "PKGNAME",  optional ],
 				[ "PKGREVISION", optional ],
 				[ "SVR4_PKGNAME", optional ],
@@ -7062,6 +7062,8 @@ sub checkfile($) {
 	if (S_ISDIR($st->mode)) {
 		if ($basename eq "files" || $basename eq "patches" || $basename eq "CVS") {
 			# Ok
+		} elsif ($fname =~ m"(?:^|/)files/[^/]*$") {
+			# Ok
 
 		} elsif (!is_emptydir($fname)) {
 			log_warning($fname, NO_LINE_NUMBER, "Unknown directory name.");
@@ -7117,6 +7119,8 @@ sub checkfile($) {
 	} elsif (!-T $fname) {
 		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
 
+	} elsif ($fname =~ m"(?:^|/)files/[^/]*$") {
+		# Ok
 	} else {
 		log_warning($fname, NO_LINE_NUMBER, "Unexpected file found.");
 		$opt_check_extra and checkfile_extra($fname);
