@@ -1,5 +1,45 @@
 # $NetBSD$
 #
+# Infrastructure support for the Service Management Facility (SMF).  This
+# file will be sourced and used if INIT_SYSTEM is set to "smf".
+#
+# User-settable variables:
+#
+# SMF_PREFIX
+#	This is the global FMRI prefix that will be used in SMF.  The
+#	default is "pkgsrc", so the general URI will be of the form
+#	"svc:/pkgsrc/<package>:<instance>".
+#
+# Package-settable variables:
+#
+# SMF_SRCDIR
+#	The source directory containing manifest and method files.  This
+#	defaults to ${FILESDIR}/smf and can be set to a location under
+#	${WRKSRC} if necessary (i.e. the source includes SMF files).
+#
+# SMF_NAME
+#	This sets the service name part of the FMRI, and defaults to the
+#	lower-case string of PKGBASE.
+#
+# SMF_MANIFEST
+#	The name of the XML file under SMF_SRCDIR which is to be used as
+#	this package's manifest.  The default name is "manifest.xml"
+#
+# SMF_INSTANCES
+#	The list of instances this manifest provides.  Manifests support
+#	multiple instances, the default is a single "default" instance.
+#
+# SMF_METHODS
+#	A list of SMF method scripts available under SMF_SRCDIR with
+#	".sh" extensions to be generated and installed.
+#
+# SMF_METHOD_SRC.<method>
+#	Allows you to override the source file name for a particular
+#	method, if it does not follow the standard <method>.sh naming.
+#
+# SMF_METHOD_SHELL
+#	The default shell to use in method scripts.
+#
 
 .if !defined(SMF_MK)
 SMF_MK=				# defined

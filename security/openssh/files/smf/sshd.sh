@@ -1,4 +1,4 @@
-#!/sbin/sh
+#!@SMF_METHOD_SHELL@
 #
 # Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
@@ -35,7 +35,7 @@ create_key()
 # Both, the SMF methods and sysidconfig/sys-unconfig use different
 # arguments..
 
-case $1 in 
+case $1 in
 	# sysidconfig/sys-unconfig arguments (-c and -u)
 '-c')
 	create_key $SSHDIR/ssh_host_rsa_key rsa
@@ -63,6 +63,6 @@ case $1 in
 	echo "Usage: $0 { start | restart }"
 	exit 1
 	;;
-esac	
+esac
 
 exit $?

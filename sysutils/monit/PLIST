@@ -9,3 +9,4 @@ share/examples/monit/monit.service
 share/examples/monit/monit.upstart
 share/examples/monit/monitrc-gentoo
 share/examples/monit/monitrc.sample
+share/examples/monit/rc.monit

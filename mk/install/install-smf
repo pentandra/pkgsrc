@@ -1,3 +1,9 @@
+# $NetBSD$
+#
+# Print post-install messages instructing the user how to handle the
+# newly-installed SMF services.
+#
+
 case ${STAGE} in
 POST-INSTALL)
 	cat <<EOF

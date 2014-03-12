@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2014/02/01 22:54:50 rodent Exp $
+# $NetBSD: Makefile,v 1.422 2014/02/27 14:51:34 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -278,6 +278,7 @@ SUBDIR+=	siag
 SUBDIR+=	since
 SUBDIR+=	softmaker-office-demo
 SUBDIR+=	splitvt
+SUBDIR+=	starplot
 SUBDIR+=	stellarium
 SUBDIR+=	step
 SUBDIR+=	superkaramba
@@ -289,6 +290,7 @@ SUBDIR+=	tellico
 SUBDIR+=	tellico-kde3
 SUBDIR+=	teseq
 SUBDIR+=	tmux
+SUBDIR+=	toilet
 SUBDIR+=	topless
 SUBDIR+=	ttyrec
 SUBDIR+=	udfclient

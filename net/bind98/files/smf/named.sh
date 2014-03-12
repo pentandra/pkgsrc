@@ -1,4 +1,4 @@
-#!/sbin/sh
+#!@SMF_METHOD_SHELL@
 #
 # CDDL HEADER START
 #
@@ -99,7 +99,7 @@ case "$method" in
     done
 
     if [ ${result} = ${SMF_EXIT_OK} ]; then
-	echo "$I: Executing: ${server} ${cmdopts}" 
+	echo "$I: Executing: ${server} ${cmdopts}"
 	# Execute named(1M) with relevant command line options.
 	${server} ${cmdopts}
 	result=$?

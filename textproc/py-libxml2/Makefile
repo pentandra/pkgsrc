@@ -11,8 +11,8 @@ HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
 
-USE_GCC_RUNTIME=	yes
 USE_MULTIARCH=	lib
+USE_GCC_RUNTIME=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 NO_CONFIGURE=	YES
